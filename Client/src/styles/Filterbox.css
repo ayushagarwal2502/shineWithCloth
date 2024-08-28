@@ -1,0 +1,22 @@
+.filterBox {
+    box-shadow: -6px -9px 43px 0px rgba(0,0,0,0.1);
+    font-size: 20px;
+    width: 20%;
+    padding: 0.5% 2%;
+    border-radius: 1em;
+    border-color: transparent;
+}
+
+.colorBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* border: 1px solid black; */
+}
+
+@media(max-width:768px) {
+  .filterBox{
+    width: 30%;
+  }
+}

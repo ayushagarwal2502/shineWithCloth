@@ -1,0 +1,25 @@
+.searchBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1% 0;
+}
+
+.searchBar input{    
+    width: 30%;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 1.2% 0;
+    outline: none;
+    font-size: 20px;       
+}
+
+@media (max-width: 768px) {
+    .searchBar input{
+        width: 80%;
+    }
+}
+
+.searchBar img:hover{
+    cursor: pointer;
+}

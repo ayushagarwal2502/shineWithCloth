@@ -1,0 +1,16 @@
+.App {
+  margin: 1%;
+  box-sizing: border-box;
+}
+
+.data {
+  display: flex;
+}
+
+/* Mobile Phones
+@media (max-width: 768px) {
+  .data{
+    display: flex;
+    flex-direction: column;
+  }
+} */

@@ -1,0 +1,18 @@
+.login-container {
+
+text-align: center;
+
+
+}
+.login {
+
+  position: relative;
+  text-align: center;
+  border-style: solid;
+  border-width: 2px;
+  display: inline-block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+}
+
