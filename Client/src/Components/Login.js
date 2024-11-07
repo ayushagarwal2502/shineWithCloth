@@ -34,12 +34,17 @@ const Login = () => {
   }
   return (
     <div className='login-container'>
-      <div className='login'>
-       
-         <InputControl label="Email" placeholder="Enter Email "
+       <div className='image'>
+        <div className='forms'>
+        <label>Email</label>
+               <input type="email" placeholder="Enter Email"  onChange={(e)=>setvalue((prev)=>({...prev,email:e.target.value}))} />
+               <br/><br/>
+               <label>Password</label>
+               <input type="password"  placeholder="Enter Password" onChange={(e)=>setvalue((prev)=>({...prev,pass:e.target.value}))} />
+         {/* <InputControl label="Email" placeholder="Enter Email "
          onChange={(e)=>setvalue((prev)=>({...prev,email:e.target.value}))}/>
          <InputControl label="Password" placeholder="Enter Password "
-         onChange={(e)=>setvalue((prev)=>({...prev,pass:e.target.value}))}/>
+         onChange={(e)=>setvalue((prev)=>({...prev,pass:e.target.value}))}/> */}
 
          <div >
          <p>{errorMsg}</p>
@@ -52,6 +57,7 @@ const Login = () => {
            </span>
           </p>
          </div>
+       </div>
        </div>
     </div>
   )
