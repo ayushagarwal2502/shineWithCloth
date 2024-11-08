@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
-import InputControl from './InputControl';
 import { createUserWithEmailAndPassword,updateProfile } from "firebase/auth";
 import { auth } from '../Firebase';
 import '../styles/SignUp.css';
@@ -38,15 +37,17 @@ const SignUp = () => {
   }
   return (
     <div className='login-container'>
-      <div className='login'>
+   <div className='image'>
+   <div className='forms'>
       <h1>sign up</h1>
-     <InputControl label="Name" placeholder="Enter Name "
-     onChange={(e)=>setvalue((prev)=>({...prev,name:e.target.value}))}/>   
-    <InputControl label="Email" placeholder="Enter Email " 
-    onChange={(e)=>setvalue((prev)=>({...prev,email:e.target.value}))}/>
-    <InputControl label="Password" placeholder="Enter Password "
-    onChange={(e)=>setvalue((prev)=>({...prev,pass:e.target.value}))}/>
-
+      <label>Name</label>
+               <input type="email" placeholder="Enter Email"  onChange={(e)=>setvalue((prev)=>({...prev,name:e.target.value}))} />
+               <br/><br/>
+     <label>Email</label>
+               <input type="email" placeholder="Enter Email"  onChange={(e)=>setvalue((prev)=>({...prev,email:e.target.value}))} />
+               <br/><br/>
+        <label>Password</label>
+               <input type="password"  placeholder="Enter Password" onChange={(e)=>setvalue((prev)=>({...prev,pass:e.target.value}))} />
     <div >
       <p>{errorMsg}</p>
      <button onClick={handleSubmit} disabled={submitButtonDislabeled}>Login</button>
@@ -57,6 +58,7 @@ const SignUp = () => {
       <Link to="/login">Login</Link>
       </span>
      </p>
+     </div>
      </div>
     </div>
 </div>

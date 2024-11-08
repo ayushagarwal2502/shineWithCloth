@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import InputControl from './InputControl';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../Firebase';
 import '../styles/Login.css';
@@ -35,26 +34,20 @@ const Login = () => {
   return (
     <div className='login-container'>
        <div className='image'>
-        <div className='forms'>
+       <div className='forms'>
         <label>Email</label>
                <input type="email" placeholder="Enter Email"  onChange={(e)=>setvalue((prev)=>({...prev,email:e.target.value}))} />
                <br/><br/>
-               <label>Password</label>
+        <label>Password</label>
                <input type="password"  placeholder="Enter Password" onChange={(e)=>setvalue((prev)=>({...prev,pass:e.target.value}))} />
-         {/* <InputControl label="Email" placeholder="Enter Email "
-         onChange={(e)=>setvalue((prev)=>({...prev,email:e.target.value}))}/>
-         <InputControl label="Password" placeholder="Enter Password "
-         onChange={(e)=>setvalue((prev)=>({...prev,pass:e.target.value}))}/> */}
-
          <div >
          <p>{errorMsg}</p>
-     <button onClick={handleSubmit} disabled={submitButtonDislabeled}>Login</button>
+        <button onClick={handleSubmit} disabled={submitButtonDislabeled}>Login</button>
           <p>
             Already Have an account ?{" "}
-
-           <span>
+          <span>
            <Link to="/">Sign Up</Link>
-           </span>
+          </span>
           </p>
          </div>
        </div>
