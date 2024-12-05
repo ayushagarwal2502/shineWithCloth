@@ -50,7 +50,7 @@ const SignUp = () => {
                <input type="password"  placeholder="Enter Password" onChange={(e)=>setvalue((prev)=>({...prev,pass:e.target.value}))} />
     <div >
       <p>{errorMsg}</p>
-     <button onClick={handleSubmit} disabled={submitButtonDislabeled}>Login</button>
+     <button onClick={handleSubmit} disabled={submitButtonDislabeled}>Signup</button>
      <p>
        Already Have an account ?{" "}
 
