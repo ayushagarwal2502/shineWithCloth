@@ -26,7 +26,7 @@ const Login = () => {
     setsubmitButtonDisabled(false);
     console.log(res);
   }).catch((err)=>{
-    setsubmitButtonDisabled(false);
+    setsubmitButtonDisabled(true);
     console.log(err)
   })
    navigate("/dashboard")
